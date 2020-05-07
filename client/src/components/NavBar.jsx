@@ -1,30 +1,22 @@
-import React, { Component } from 'react'
-import styled from 'styled-components'
 
-import Logo from './Logo'
-import Links from './Links'
+import React from 'react'
+import { NavLink } from 'react-router-dom'
 
-const Container = styled.div.attrs({
-    className: 'container',
-})``
+const Navbar = () => (
+  <header>
+    <h1>MinePalette</h1>
+    <div className="links">
+      <NavLink to="/" className="link">
+        Home
+      </NavLink>
+      <NavLink to="/gallery" className="link">
+        Gallery
+      </NavLink>
+      <NavLink to="/blocks/create" className="link">
+        Upload Block
+      </NavLink>
+    </div>
+  </header>
+)
 
-const Nav = styled.nav.attrs({
-    className: 'navbar navbar-expand-lg navbar-dark bg-dark',
-})`
-    margin-bottom: 20 px;
-`
-
-class NavBar extends Component {
-    render() {
-        return (
-            <Container>
-                <Nav>
-                    <Logo />
-                    <Links />
-                </Nav>
-            </Container>
-        )
-    }
-}
-
-export default NavBar
+export default Navbar

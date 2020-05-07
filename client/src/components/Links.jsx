@@ -1,43 +1,25 @@
-import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
-import styled from 'styled-components'
+import React from 'react'
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import NavBar from '../components/NavBar'
+import HomePage from '../components/homepage'
+import Gallery from '../components/gallery'
+import BlocksInsert from '../pages/BlocksInsert'
 
-const Collapse = styled.div.attrs({
-    className: 'collpase navbar-collapse',
-})``
 
-const List = styled.div.attrs({
-    className: 'navbar-nav mr-auto',
-})``
-
-const Item = styled.div.attrs({
-    className: 'collpase navbar-collapse',
-})``
-
-class Links extends Component {
-    render() {
-        return (
-            <React.Fragment>
-                <Link to="/" className="navbar-brand">
-                    Mern app
-                </Link>
-                <Collapse>
-                    <List>
-                        <Item>
-                            <Link to="/blocks/list" className="nav-link">
-                                List Blocks
-                            </Link>
-                        </Item>
-                        <Item>
-                            <Link to="/blocks/create" className="nav-link">
-                                Create Block
-                            </Link>
-                        </Item>
-                    </List>
-                </Collapse>
-            </React.Fragment>
-        )
-    }
-}
+const Links = () => (
+  <BrowserRouter>
+    <div>
+      <NavBar />
+      <div className="main-content">
+        <p>kittens</p>
+        <Switch>
+          <Route component={HomePage} path="/" exact={true} />
+          <Route component={Gallery} path="/gallery" />
+          <Route component={BlocksInsert} path="/uploadBlock" />
+        </Switch>
+      </div>
+    </div>
+  </BrowserRouter>
+)
 
 export default Links
