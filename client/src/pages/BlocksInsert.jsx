@@ -127,8 +127,8 @@ class BlocksInsert extends Component {
                     <Form.Control as='textarea' rows='1' onChange={this.handleChangeInputColor} />
                 </Form.Group>
                 <Form.Group>
-                    <Form.Label>Blast Resistance</Form.Label>
-                    <Form.Control as='textarea' rows='1' onChange={this.handleChangeBlastResistance} />
+                    <Form.Label>Blast Resistance: Must be a Number!</Form.Label>
+                    <Form.Control type='number' rows='1' onChange={this.handleChangeBlastResistance} />
                 </Form.Group>
                 <Form.Group>
                     <Form.Label>Luminant? Yes or No</Form.Label>
