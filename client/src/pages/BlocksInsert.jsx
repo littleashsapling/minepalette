@@ -109,7 +109,7 @@ class BlocksInsert extends Component {
                 onSubmit={this.handleIncludeBlock}
                 method='post'
                 encType='multipart/form-data'
-                className='upload-form'>
+                className='uploadform'>
                 <Form.Group>
                     <Form.Label>Choose image to upload</Form.Label>
                     <Form.Control type='file' name='image' onChange={this.handleOnChange} />
@@ -131,23 +131,23 @@ class BlocksInsert extends Component {
                     <Form.Control as='textarea' rows='1' onChange={this.handleChangeBlastResistance} />
                 </Form.Group>
                 <Form.Group>
-                    <Form.Label>Luminant?Yes or No</Form.Label>
-                    <Form.Control as='textarea' rows='1' onChange={this.handleChangeLuminant}/>
+                    <Form.Label>Luminant? Yes or No</Form.Label>
+                    <Form.Control as='textarea' rows='1' onChange={this.handleChangeLuminant} />
                 </Form.Group>.
                 <Form.Group>
-                    <Form.Label>Transparent?Yes or No</Form.Label>
-                    <Form.Control as='textarea' rows='1'onChange={this.handleChangeTransparent} />
+                    <Form.Label>Transparent? Yes or No</Form.Label>
+                    <Form.Control as='textarea' rows='1' onChange={this.handleChangeTransparent} />
                 </Form.Group>
                 <Form.Group>
                     <Form.Label>Flammable? Yes or No</Form.Label>
-                    <Form.Control as='textarea' rows='1' onChange={this.handleChangeFlammable}/>
+                    <Form.Control as='textarea' rows='1' onChange={this.handleChangeFlammable} />
                 </Form.Group>
                 <Form.Group>
                     <Form.Label>Gravity? Yes or No</Form.Label>
                     <Form.Control as='textarea' rows='1' onChange={this.handleChangeGravity} />
                 </Form.Group>
                 <Button
-                    variant='primary'
+                    variant='success'
                     type='submit'
                     className={`${!this.image ? 'submit-btn' : 'submit-btn'}`}>
                     Upload Block
@@ -155,7 +155,6 @@ class BlocksInsert extends Component {
             </Form>
         )
     }
-
 }
 
 export default BlocksInsert
