@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    background: linear-gradient(141deg, #454747 0%, #141718 51%, #151b1a 75%);
+    background: #151b1a;
     font-family: Noto Sans, Helvetica, sans-serif;
     color: #666;
     letter-spacing: 1px;
@@ -26,7 +26,7 @@ nav {
 /* ----- header css ends here ----- */
 
 
-/* ----- form content css starts here ----- */
+/* ----- block database content css starts here ----- */
 
 .uploadform {
     width: 60%;
@@ -51,39 +51,60 @@ nav {
     flex-wrap: wrap;
     justify-content: center;
     .image {
-        overflow: hidden;
-        margin: 3rem;
+        margin: 2rem;
         img {
-            width: 155px;
-            height: 160px;
-            transform: scale(1.1);
+            width: 77.5px;
+            height: 80px;
+            transform: scale(1);
             transition: all 1s;
             &:hover {
-                transform: scale(1.01);
+                transform: scale(1.1);
             }
         }
     }
 }
 
 
-/* ----- form content css ends here----- */
+/* ----- block database content css ends here----- */
 
 
 /*------------table content css-----------*/
 
 .table {
-    color: white;
     table-layout: fixed;
     width: 100%;
-    .col-header {
-        border: 1px solid black;
-    }
+    margin-top: 15px;
     .col-content {
+        color: white;
         word-wrap: break-word;
         &:hover {
-            background-color: #f5f5f5;
+            background-color: #666;
+            padding-top: 5px;
         }
     }
+}
+
+.table th,
+.col-header {
+    border-bottom: 1px dashed #666;
+}
+
+.table td,
+.table th {
+    border-top: 1px solid transparent !important;
+    border-left: 1px dashed #666;
+    padding-left: .5rem;
+    padding: .5rem;
+    font-size: x-small;
+}
+
+.rotate {
+    color: white;
+    text-align: center;
+    height: 105px;
+    white-space: nowrap;
+    transform: /* Magic Numbers */
+    translate(26px, 35px) rotate(-90deg);
 }
 
 

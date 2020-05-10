@@ -85,7 +85,7 @@ class BlocksList extends Component {
 
                 <tr class='col-header'>
                     {columns.map(col => {
-                        return (<td>{col.Header}</td>)
+                        return (<th class='rotate'>{col.Header}</th>)
                     })}
                 </tr>
                 {blocks.map(block => {
